@@ -1,12 +1,5 @@
 # Low Level Designs & Design Patterns
 
-## Table of Contents
-
-1. [Core Concepts](#-core-concepts)
-2. [Design Patterns](#-design-patterns)
-
----
-
 ## 🧠 Core Concepts
 
 Understanding the foundational principles of software architecture.
