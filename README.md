@@ -1,22 +1,9 @@
 # Low Level Designs & Design Patterns
 
-![Java](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)
-![Build](https://img.shields.io/badge/Build-Maven-blue?style=for-the-badge&logo=apachemaven)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-Welcome to the **Low Level Designs and Design Patterns** repository! 
-
-This repository serves as a comprehensive reference for developers mastering **Low-Level Design (LLD)**. It contains production-ready implementations of Object-Oriented Design (OOD) principles, design patterns, and full-scale system design solutions using **Java**.
-
----
-
 ## Table of Contents
 
 1. [Core Concepts](#-core-concepts)
 2. [Design Patterns](#-design-patterns)
-3. [System Design Solutions (LLD)](#-system-design-solutions-lld)
-4. [How to Run](#-how-to-run)
-5. [Contributing](#-contributing)
 
 ---
 
