@@ -3,6 +3,7 @@ import Models.Product;
 import Services.PaymentService;
 import Services.ProductService;
 import Services.payments.PaymentType;
+import States.DispenseState;
 import States.IdleState;
 import States.ProductSelectState;
 import States.State;
@@ -22,6 +23,8 @@ public class VendingMachine {
 
     ProductSelectState productSelectState;
 
+    DispenseState dispenseState;
+
 
     public void loadSystem(){
         catalog.loadProducts(new ArrayList<>());
@@ -32,6 +35,7 @@ public class VendingMachine {
         paymentTypes.add(PaymentType.CARD);
         idleState = new IdleState();
         productSelectState = new ProductSelectState(new ProductService(), new PaymentService(paymentTypes));
+        dispenseState = new DispenseState();
     }
 
     public void request(State state){
@@ -44,6 +48,7 @@ public class VendingMachine {
             Scanner scanner = new Scanner(System.in);
             scanner.next();
             request(productSelectState);
+            request(dispenseState);
         }
     }
 
