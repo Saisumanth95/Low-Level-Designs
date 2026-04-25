@@ -12,15 +12,9 @@ import States.ProductSelectState;
 void main() {
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
-   VendingMachine vendingMachine = new VendingMachine();
+    VendingMachine vendingMachine = new VendingMachine();
 
-    Catalog catalog = Catalog.getInstance();
-
-
-    catalog.loadProducts(new ArrayList<>());
-    catalog.addProduct(new Product(1,"Oats", "Quicker oats", 2.00, 6));
-    catalog.addProduct(new Product(1,"Protein bar", "Super you protein bar", 4.00, 10));
-    catalog.addProduct(new Product(1,"Milk", "Low fat milk", 5.00, 9));
+    vendingMachine.loadSystem();
 
     IdleState idleState = new IdleState();
     vendingMachine.request(idleState);
@@ -29,7 +23,7 @@ void main() {
     paymentTypes.add(PaymentType.UPI);
     paymentTypes.add(PaymentType.CARD);
 
-    ProductSelectState productSelectState = new ProductSelectState(new ProductService(catalog), new PaymentService(paymentTypes));
+    ProductSelectState productSelectState = new ProductSelectState(new ProductService(), new PaymentService(paymentTypes));
     vendingMachine.request(productSelectState);
     vendingMachine.request(idleState);
 

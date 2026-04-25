@@ -5,11 +5,8 @@ import Models.Product;
 
 public class ProductService {
 
-    private Catalog catalog;
+    private Catalog catalog = Catalog.getInstance();
 
-    public ProductService(Catalog catalog) {
-        this.catalog = catalog;
-    }
 
     public void ListProduct(){
 
