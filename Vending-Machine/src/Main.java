@@ -16,16 +16,7 @@ void main() {
 
     vendingMachine.loadSystem();
 
-    IdleState idleState = new IdleState();
-    vendingMachine.request(idleState);
-
-    List<PaymentType> paymentTypes = new ArrayList<>();
-    paymentTypes.add(PaymentType.UPI);
-    paymentTypes.add(PaymentType.CARD);
-
-    ProductSelectState productSelectState = new ProductSelectState(new ProductService(), new PaymentService(paymentTypes));
-    vendingMachine.request(productSelectState);
-    vendingMachine.request(idleState);
+    vendingMachine.start();
 
 
 }
